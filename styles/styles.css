@@ -15,7 +15,7 @@
   --background-color:cyan;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: magenta;
+  --text-color: rgb(0, 0, 0);
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
@@ -256,6 +256,6 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.johnny{
-  background: magenta;
+.section-container{
+  background-color: magenta;
 }
