@@ -1,23 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const videoContainer = document.querySelector(".video.block");
-
-    if (videoContainer) {
-      
-        const driveFileId = "1ckRrGydMslBiewh0IsCwBeER65Y58aKL";
-
-        
-        const driveEmbedUrl = `https://drive.google.com/file/d/${driveFileId}/preview`;
-
-        
-        const iframe = document.createElement("iframe");
-        iframe.src = driveEmbedUrl;
-        iframe.width = "640";  
-        iframe.height = "360"; 
-        iframe.allow = "autoplay";
-        iframe.frameBorder = "0";
-        iframe.allowFullscreen = true;
-
-        
-        videoContainer.appendChild(iframe);
-    }
-});
+function embedGoogleDriveVideo(link) {
+    const embedLink = link;
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', embedLink);
+    const videoDiv = document.querySelector('.video');
+    videoDiv.innerHTML = '';
+    videoDiv.appendChild(iframe);
+}
+const driveLink = 'https://drive.google.com/file/d/1ckRrGydMslBiewh0IsCwBeER65Y58aKL/preview';
+embedGoogleDriveVideo(driveLink);
